@@ -5,13 +5,13 @@ import { EffectComposer, SSAO, Bloom } from "@react-three/postprocessing"
 export default function App() {
   return (
     <Canvas shadows gl={{ stencil: false, antialias: false }} camera={{ position: [0, 0, 20], fov: 50, near: 17, far: 40 }}>
-      <fog attach="fog" args={["red", 30, 45]} />
+      <fog attach="fog" args={["red", 35, 40]} />
       <color attach="background" args={["#feef8a"]} />
-      <ambientLight intensity={1.5} />
+      <ambientLight intensity={1.0} />
       <directionalLight position={[-10, -10, -5]} intensity={0.5} />
       <directionalLight
         castShadow
-        intensity={1}
+        intensity={2}
         position={[50, 50, 25]}
         shadow-mapSize={[256, 256]}
         shadow-camera-left={-10}
